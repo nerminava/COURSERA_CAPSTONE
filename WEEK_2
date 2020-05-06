@@ -1,0 +1,12 @@
+
+import pandas as pd
+import numpy as np
+from bs4 import BeautifulSoup
+import requests
+
+
+wikipedia_link='https://en.wikipedia.org/wiki/List_of_postal_codes_of_Canada:_M'
+raw_wikipedia_page= requests.get(wikipedia_link).text
+
+# using beautiful soup to parse the HTML/XML codes.
+soup = BeautifulSoup(raw_wikipedia_page,'xml')
